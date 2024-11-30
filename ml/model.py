@@ -6,7 +6,7 @@ from ml.data import process_data
 # Optional: implement hyperparameter tuning.
 def train_model(X_train, y_train):
     """
-    Trains a machine learning model and returns it.
+    Trains a machine learning model and return it.
 
     Inputs
     ------
