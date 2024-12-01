@@ -1,12 +1,14 @@
 import pytest
-import os 
-import logging 
+import os
+import logging
 import pickle
 import pandas as pd
+
 
 @pytest.fixture(scope="module")
 def path():
     return "./data/census.csv"
+
 
 @pytest.fixture(scope="module")
 def data():
@@ -14,9 +16,10 @@ def data():
     datapath = "./data/census.csv"
     return pd.read_csv(datapath)
 
+
 @pytest.fixture(scope="module")
 def features():
-    cat_features = [    "workclass",
+    cat_features = [   "workclass",
                         "education",
                         "marital-status",
                         "occupation",
@@ -26,7 +29,7 @@ def features():
                         "native-country"]
     return cat_features
 
-## TODO: implement the first test. Change the function name and input as needed
+
 def test_import_data(path):
     """
     Test presence and shape of dataset file
@@ -49,7 +52,6 @@ def test_import_data(path):
         raise err
 
 
-## TODO: implement the second test. Change the function name and input as needed
 def test_features(data, features):
     """
     Check that categorical features are in dataset
@@ -62,7 +64,6 @@ def test_features(data, features):
         raise err
 
 
-## TODO: implement the third test. Change the function name and input as needed
 def test_is_model():
     """
     Check saved model is present
