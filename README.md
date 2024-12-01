@@ -24,6 +24,6 @@ Working in a command line environment is recommended for ease of use with git an
 * Write a model card using the provided template.
 
 # API Creation
-*  Create a RESTful API using FastAPI this must implement:
+*  Create a RESTful API using FastAPI this must implemented:
     * GET on the root giving a welcome message.
     * POST that does model inference.
